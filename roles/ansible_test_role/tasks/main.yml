@@ -1,0 +1,19 @@
+# ref: https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html
+# TODO: determine whether import_tasks or include_tasks is more appropriate
+---
+- import_tasks: example1.yml
+  tags:
+    - never
+    - example1
+
+- import_tasks: example2.yml
+  tags:
+    - never
+    - example2
+
+- import_tasks: install.yml
+  tags:
+    - never
+    - install
+  vars:
+    install_var: test_install_var

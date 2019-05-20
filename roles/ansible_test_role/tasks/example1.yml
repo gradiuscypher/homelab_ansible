@@ -1,0 +1,8 @@
+---
+- name: "[example1.yml] Print debug message from inventory file"
+  debug:
+    msg: Printing first variable - {{ variable_1 }}
+
+- name: "[example1.yml] Print debug message from inventory file"
+  debug:
+    msg: Printing second variable - {{ variable_2 }}

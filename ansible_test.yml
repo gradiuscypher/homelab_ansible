@@ -1,0 +1,6 @@
+# ref: https://docs.ansible.com/ansible/latest/modules/import_role_module.html#import-role-module
+---
+- hosts: ansible_test
+  tasks:
+    - import_role:
+        name: ansible_test_role

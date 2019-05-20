@@ -1,0 +1,15 @@
+# note: a showcase of various example commands
+---
+- name: Print a debug message including variables
+  debug:
+    msg: Variable 1 - {{ variable_1 }}, Variable 2 - {{ variable_2 }}
+
+- name: Copy the .screenrc file to the root user
+  copy:
+    src: .screenrc
+    dest: /root/.screenrc
+
+- name: Copy the example template file and fill in variables
+  template:
+    src: example_template.conf.j2
+    dest: /root/example_template.conf
